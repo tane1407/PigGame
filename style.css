@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-weight: inherit;
+}
+body {
+  background-image: url("assets/imgs/background.png");
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Căn chỉnh toàn bộ: box, button, img */
+.container {
+  /* background-color: white;
+  border-radius: 20px;
+  box-shadow: -15px 17px 17px rgba(10, 10, 10, 0.15); */
+  width: 85%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+/* Căn chỉnh box */
+.score-group {
+  width: 100%;
+  height: 85%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+/* Căn chỉnh đối tượng bên trong box */
+.box-player {
+  width: 45%;
+  background-color: #9dddff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: -15px 17px 17px rgba(10, 10, 10, 0.15);
+  transition: all 0.75s; /*chuyển động của từng box*/
+}
+.active-player {
+  color: #ff0000;
+  background-color: rgba(0, 179, 255, 0.303);
+  font-weight: 700;
+  box-shadow: -15px 17px 17px rgba(10, 10, 10, 0.15);
+}
+.winner-player {
+  background-color: #a2ff9b;
+}
+.box-p1 {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.box-p2 {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.player {
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+.player-score {
+  color: rgba(72, 0, 255, 0.673);
+  padding: 40px;
+  font-size: 60px;
+}
+.current-player {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(141, 255, 116, 0.734);
+  color: rgb(94, 94, 94);
+  border-radius: 10px;
+  transition: all 0.75s;
+  box-shadow: -15px 17px 17px rgba(10, 10, 10, 0.15);
+}
+.current-score {
+  margin-top: 10px;
+  font-weight: inherit;
+}
+
+/* Phần button và img */  
+.button-group {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.button {
+  height: 45px;
+  width: 210px;
+  background-color: rgba(167, 255, 255, 0.664);
+  border: none;
+  border-radius: 50px;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  box-shadow: -15px 17px 17px rgba(10, 10, 10, 0.15);
+  margin-top: 15px;
+}
+.dice-box {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#dice-img {
+  width: 30%;
+  box-shadow: -15px 17px 17px rgba(10, 10, 10, 0.15);
+}
+.button:hover {
+  background-color: white;
+  color: rgb(53, 124, 255);
+}

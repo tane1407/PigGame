@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pig Game</title>
+        <link rel="icon" type="image/x-icon" href="assets/imgs/logo.png">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="rulestyle.css">
+        <link rel="stylesheet"
+            href="/assets/fontawesome-free-6.7.2-web/css/all.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div id="box-player" class="score-group">
+                <div class="box-player box-p1 active-player">
+                    <div class="player">
+                        <h2 class="player-name">PLAYER 1</h2>
+                        <h1 id="total-p1" class="player-score">0</h1>
+                    </div>
+                    <div class="current-player">
+                        <h2 class="current-label">CURRENT</h2>
+                        <h1 class="current-score" id="current-p1">0</h1>
+                    </div>
+                </div>
+                <div class="box-player box-p2">
+                    <div class="player">
+                        <h2 class="player-name">PLAYER 2</h2>
+                        <h1 id="total-p2" class="player-score">0</h1>
+                    </div>
+                    <div class="current-player">
+                        <h2 class="current-label">CURRENT</h2>
+                        <h1 class="current-score" id="current-p2">0</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div id ="btn-gr" class="button-group">
+
+                <button class="button" id="btn-new"> <i
+                        class="fa-solid fa-gamepad"></i> NEW GAME</button>
+
+                <div id="dice-box-img" class="dice-box">
+                    <img id="dice-img" src="assets/imgs/dice-1.jpg" alt="Dice">
+                </div>
+                <button class="button" id="btn-roll"><i
+                        class="fa-solid fa-dice"></i> ROLL DICE</button>
+                <button class="button" id="btn-hold"><i
+                        class="fa-solid fa-download"></i> HOLD</button>
+                <button class="button" id="btn-rule"><i
+                        class="fa-solid fa-clipboard-question"></i> HOW TO
+                    PLAY</button>
+            </div>
+            <div class="rule-box" id="rule-doc">
+                <div class="rule-title"><i class="fa-solid fa-clipboard-question"></i> HOW TO  PLAY</div>
+                <div class="rule">
+                    <ol>
+                        <li>Click <strong style=" color: rgba(72, 0, 255, 0.673); font-weight: 700;"><i class="fa-solid fa-dice"></i> ROLL DICE</strong> to get points (Dice roll from 1 to 6)</li>
+
+                        <li>
+                            If the dice shows 1,
+                            you lose the current score and the turn changes.
+                        </li>
+
+                        <li>  Click <strong style=" color: rgba(72, 0, 255, 0.673); font-weight: 700;"><i class="fa-solid fa-download"></i> HOLD</strong> to save your CURRENT score to PLAYER score.
+                        </li>
+
+                        <li>
+                            First player to reach <strong style="color: red;">100 points</strong> wins.
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
