@@ -9,6 +9,7 @@ let btnRoll = document.getElementById("btn-roll");
 let btnHold = document.getElementById("btn-hold");
 let btnNew = document.getElementById("btn-new");
 let btnRule = document.getElementById("btn-rule");
+let btnCloseRule = document.getElementById("btn-close");
 
 //img
 let getDice = document.getElementById("dice-img");
@@ -27,10 +28,14 @@ let totalScore2 = document.getElementById("total-p2");
 let getRuleDoc = document.getElementById("rule-doc");
 getRuleDoc.style.display = "none";
 
-btnRule.addEventListener("click",function(){
+btnRule.addEventListener("click", function () {
   document.getElementById("btn-gr").style.marginTop = "-150px";
   getRuleDoc.style.display = "block";
-  btnRule.style.display = "none";  
+});
+btnCloseRule.addEventListener("click", function () {
+  getRuleDoc.style.display = "none";
+  document.getElementById("btn-gr").style.marginTop = "0px";
+
 });
 
 function SwitchPlayer() {
@@ -58,19 +63,17 @@ btnNew.addEventListener("click", function () {
   totalScore2.innerHTML = score2;
   getRuleDoc.style.display = "none";
   getDice.style.display = "none";
-   btnRule.style.display = "block";
+  btnRule.style.display = "block";
   document.querySelector(".box-p1").classList.add("active-player");
   document.querySelector(".box-p2").classList.remove("active-player");
   document.querySelector(".box-p1").classList.remove("winner-player");
-  document.querySelector(".box-p1").classList.remove("winner-player");
+  document.querySelector(".box-p2").classList.remove("winner-player");
   document.getElementById("btn-gr").style.marginTop = "0px";
 });
 
 btnRoll.addEventListener("click", function () {
-  document.getElementById("btn-gr").style.marginTop = "0px";
-  btnRule.style.display = "none";
-  getRuleDoc.style.display = "none";
-  if (score1 <= 100 && score2 <= 100) {
+  // document.getElementById("btn-gr").style.marginTop = "0px";
+  if (score1 < 100 && score2 < 100) {
     randomValue = Math.floor(Math.random() * 6) + 1;
     getDice.style.display = "block";
     getDice.src = `assets/imgs/dice-${randomValue}.jpg`;
@@ -85,20 +88,16 @@ btnRoll.addEventListener("click", function () {
       SwitchPlayer();
     }
   }
-  else if(score1>100){
+  if (score1 >= 100) {
     document.querySelector(".box-p1").classList.add("winner-player");
-    alert("Player 1 is the winner. Please click \"NEW GAME\" to restart");
-    
   }
-  else{
-        document.querySelector(".box-p2").classList.add("winner-player");
-
-    alert("Player 2 is the winner. Please click \"NEW GAME\" to restart");
+  if (score2 >= 100) {
+    document.querySelector(".box-p2").classList.add("winner-player");
   }
 });
 
 btnHold.addEventListener("click", function () {
-  if (score1 <= 100 && score2 <= 100) {
+  if (score1 < 100 && score2 < 100) {
     if (player === 1) {
       score1 += currentValue;
       totalScore1.innerHTML = score1;
@@ -107,15 +106,11 @@ btnHold.addEventListener("click", function () {
       totalScore2.innerHTML = score2;
     }
     SwitchPlayer();
-  } else if(score1>100){
+  }
+  if (score1 >= 100) {
     document.querySelector(".box-p1").classList.add("winner-player");
-    alert("Player 1 is the winner. Please click \"NEW GAME\" to restart");
-    
   }
-  else{
-        document.querySelector(".box-p2").classList.add("winner-player");
-
-    alert("Player 2 is the winner. Please click \"NEW GAME\" to restart");
+  if (score2 >= 100) {
+    document.querySelector(".box-p2").classList.add("winner-player");
   }
-  document.getElementById("btn-gr").style.marginTop = "0px";
 });

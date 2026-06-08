@@ -35,38 +35,55 @@
                 </div>
             </div>
 
-            <div id ="btn-gr" class="button-group">
+            <div id="btn-gr" class="button-group">
 
-                <button class="button" id="btn-new"> <i
+                <button class="action-btn" id="btn-new"> <i
                         class="fa-solid fa-gamepad"></i> NEW GAME</button>
 
                 <div id="dice-box-img" class="dice-box">
                     <img id="dice-img" src="assets/imgs/dice-1.jpg" alt="Dice">
                 </div>
-                <button class="button" id="btn-roll"><i
+                <button class="action-btn" id="btn-roll"><i
                         class="fa-solid fa-dice"></i> ROLL DICE</button>
-                <button class="button" id="btn-hold"><i
+                <button class="action-btn" id="btn-hold"><i
                         class="fa-solid fa-download"></i> HOLD</button>
-                <button class="button" id="btn-rule"><i
+                <button class="action-btn" id="btn-rule"><i
                         class="fa-solid fa-clipboard-question"></i> HOW TO
                     PLAY</button>
             </div>
             <div class="rule-box" id="rule-doc">
-                <div class="rule-title"><i class="fa-solid fa-clipboard-question"></i> HOW TO  PLAY</div>
+                <div class="rule-title">
+                    <div class="rule-txt-title"><i
+                            class="fa-solid fa-clipboard-question"></i> HOW TO PLAY</div>
+                    <div class="action-btn-rule">
+                        <button id="btn-close">
+                            <i class="fa-solid fa-circle-xmark"></i>
+                        </button>
+                    </div>
+                </div>
                 <div class="rule">
                     <ol>
-                        <li>Click <strong style=" color: rgba(72, 0, 255, 0.673); font-weight: 700;"><i class="fa-solid fa-dice"></i> ROLL DICE</strong> to get points (Dice roll from 1 to 6)</li>
+                        <li>Click <strong
+                                style=" color: rgba(72, 0, 255, 0.673); font-weight: 700;"><i
+                                    class="fa-solid fa-dice"></i> ROLL
+                                DICE</strong> to get points (Dice roll from 1 to
+                            6)</li>
 
                         <li>
                             If the dice shows 1,
                             you lose the current score and the turn changes.
                         </li>
 
-                        <li>  Click <strong style=" color: rgba(72, 0, 255, 0.673); font-weight: 700;"><i class="fa-solid fa-download"></i> HOLD</strong> to save your CURRENT score to PLAYER score.
+                        <li> Click <strong
+                                style=" color: rgba(72, 0, 255, 0.673); font-weight: 700;"><i
+                                    class="fa-solid fa-download"></i>
+                                HOLD</strong> to save your CURRENT score to
+                            PLAYER score.
                         </li>
 
                         <li>
-                            First player to reach <strong style="color: red;">100 points</strong> wins.
+                            First player to reach <strong
+                                style="color: red;">100 points</strong> wins.
                         </li>
                     </ol>
                 </div>
